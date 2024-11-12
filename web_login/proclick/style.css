@@ -1,123 +1,180 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --text-white: hsl(0, 0%,100%);
+    --text-light-gray: hsl(0, 0%, 90%);
+    --glass-bg-color: hsla(0, 0%, 100%, 0.05);
+    --border-color: hsla(0, 0%, 100%, 0.25);
+    --blur: blur(10px);
+    --button-hover-color: hsla(0, 0%, 0%, 0.3);
+    --padding-container: 100px 0;
+    --lead: hsl(162, 2%, 56%);
+    --violet: hsl(272, 56%, 28%);
+    --orange: hsl(30, 83%, 37%);
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
-
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  background: url(gondola-mar-atardecer-planetas-en-universo_3840x2143_xtrafondos.com\ \(2\).jpg) fixed no-repeat; 
-    }
-
-.container-form {
-    width: 90%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-around;
-    transition: all .5s ease-out;
-}
-.welcome-back {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-.message {
-    padding: 1rem;
-}
-.messsage h2 {
-    font-size: 1.7rem;
-    padding: 1rem 0;
-}
-.message button {
-    padding: 1rem;
-    font-size: 400;
-    background-color: #4a4aee;
-    border-radius: 2rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: .9rem;
-    margin-top: 2rem;
-    transition: all .3s ease-in;
-    color: #fff;    
+body{
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('gondola-mar-atardecer-planetas-en-universo_3840x2143_xtrafondos.com\ \(2\).jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 96%, 0 80%);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light-gray);
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.message button:hover {
-    background-color: #6464f8;
-}
-
-.formulario {
+body::after,
+body::before{
+    content: "";
+    position: fixed;
+    height: 400px;
     width: 400px;
-    padding: 1rem;
-    margin: 2rem;
-    background-color: rgb(51, 51, 51, 0.602);
-    text-align: center;
-}
-.create-account {
-    padding: 2.7rem 0;
-    font-size: 1.7rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.5;
 }
 
-.iconos {
-    width: 200px;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-}
-.border-icono {
-    height: 20px;
-    width: 20px;
+.form-main{
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
-    transition: all .3s ease-in;
 }
 
-.border-icono:hover{
-    background-color: #4a4aee;
-    cursor: pointer;
+.form-container{
+    width: 100%;
+    max-width: 450px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
-.cuenta-gratis{
-    padding: 2rem 0;
+.form-container .box{
+    border-color: var(--glass-bg-color);
+    border: 1px solid var(--border-color);
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+    position: relative;
 }
 
-.formulario input{
-    width: 70%;
+.form-container ::placeholder{
+    color: inherit;
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.gradient-text{
+    background: linear-gradient(to right, var(--orange), var(--lead));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+}
+
+.form-container h3{
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.form-container form{
+    margin: 25px 0 20px;
+}
+.form-container .input-box{
+    margin-bottom: 25px;
+}
+
+.form-container .input_control{
     display: block;
-    margin: auto;
-    margin-bottom: 2rem;
+    height: 45px;
+    width: 100%;
     background-color: transparent;
     border: none;
-    border-bottom: white thin solid;
-    text-align: center;
-    outline: none;
-    padding: .2rem 0;
-    font-size: .9rem;
-    color: white;
+    border-bottom: 1px solid var(--border-color);
+    color: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 20px;
 }
 
-.formulario input[type="button"]{
-    width: 60%;
-    margin: auto;
-    border: solid thin white;
-    padding: .7rem;
-    border-radius: 2rem;
-    background-color: white;
-    font-weight: 600;
-    margin-top: 3rem;
-    font-size: .8rem;
-    cursor: pointer;
-    color: #222;
+.form-container .input_control:focus{
+    outline: none;
+}
 
+.form-container .input-link{
+    margin-top: 10px;
+    text-align: right;
+
+}
+
+.form-container .btn{
+    height: 45px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background: linear-gradient(to right, var(--orange), var(--lead));
+    border: none;
+    color: var(--text-white);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.form-container .btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    z-index: -1;
+}
+
+.form-container .btn:hover::before{
+    background-color: var(--button-hover-color);
+}
+
+.form-container p{
+    text-align: center;
+}
+
+@media(max-width: 575px){
+    body::after,
+    body::before{
+        height: 250px;
+        width: 250px;
+        filter: blur(100px);
+    }
+    .form-container .box{
+        padding: 30px;
+    }
+    .form-container h3{
+        font-size: 24px;
+    }
 }
