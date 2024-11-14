@@ -1,25 +1,53 @@
+body {
+    background-color: rgb(97, 45, 45);
 
+}
 
-
-.col {
+/* Barra de navegacion*/
+.navbar {
+    
+    padding: 2rem;
+    background-color: #f5f6f7;
+    background: linear-gradient( rgb(228, 243, 17), rgb(22, 22, 2));
+}
+.navbar-collapse {
+   align-items: center;
+    justify-content: space-between;
+}
+.quienes-somos {
     color: white;
-    font-size: 50px;
-    background-color: blue;
-    border: 5px solid white;
+    font-size: 1.5rem;
 }
-.row {
-    background-color: rgb(150, 152, 160);
-    border: 2px solid rgb(110, 73, 5);
-    padding:  5px;
-    margin: 20px;
+/* Estilo Genereales*/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgb(228, 243, 17), rgb(22, 22, 2));
 }
-.btn-group me-2 {
-    border: 2px solid rgb(110, 5, 78);
-    padding:  5px;
-    margin: 20px;
+h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+h2 {
+    color: white;
+}
+.cuerpo {
+    background: linear-gradient( rgb(228, 243, 17), rgb(22, 22, 2));
+    border-radius: 3px;
+}
 
+
+/* Seccion Hero*/
+.hero {
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
 }
-.tarjeta {
-    width: 10px;
-    height: 300px;
+/* seccion Rubros*/
+.rubros {
+    padding: 40px;
+
+    
 }
