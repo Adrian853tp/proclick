@@ -1,0 +1,73 @@
+body{
+    background-color: beige;
+}
+/* Barra de navegacion*/
+.navbar {
+    
+    padding: 2rem;
+    background-color: #f5f6f7;
+    background: linear-gradient( rgb(228, 243, 17), rgb(22, 22, 2));
+}
+.navbar-collapse {
+   align-items: center;
+    justify-content: space-between;
+}
+.quienes-somos {
+    color: white;
+    font-size: 1.5rem;
+}
+/* Estilo Genereales*/
+#parrafo {
+    color: black;
+    font-size: 1rem;
+    text-justify: auto;
+    justify-content: center;
+    
+}
+
+#parrafo2 {
+    color: black;
+   
+}
+#parrafo1 {
+    color: black;
+    font-size: 3rem;
+    text-justify: auto;
+    justify-content: flex-start;
+}
+.cabeza {
+    background: linear-gradient( rgb(246, 248, 247), rgb(150, 216, 150));
+    padding-inline: 30px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgb(228, 243, 17), rgb(22, 22, 2));
+}
+h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+h2 {
+    color: white;
+}
+.cuerpo {
+    background: linear-gradient( rgb(228, 243, 17), rgb(22, 22, 2));
+    border-radius: 3px;
+}
+
+
+/* Seccion Hero*/
+.hero {
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
+}
+/* seccion Rubros*/
+.rubros {
+    padding: 40px;
+
+    
+}
